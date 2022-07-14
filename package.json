@@ -1,0 +1,36 @@
+{
+  "name": "mxa",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 9000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "author": "SAC",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/css": "^11.7.1",
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "formik": "^2.2.9",
+    "next": "12.1.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.8.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-tsparticles": "^1.42.4",
+    "sass": "^1.49.9",
+    "swiper": "^8.0.7",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
+  }
+}

@@ -1,0 +1,256 @@
+.mxa-header-fixed{
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;  
+  &.active{
+    background-color: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  }
+}
+.mxa-menu-hamburger{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: #000000;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2) {
+      top: 7px;
+    }
+    &:nth-child(3) {
+      top: 14px;
+    }
+  }
+  &.open span {
+    &:nth-child(1) {
+      width: 0%;
+      top: 6px;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      width: 0%;
+      top: 6px;
+      left: 50%;
+    }
+  }
+}
+.mxa-overlay-header{
+  position: fixed;
+  width: 100%;
+  height: 0%;
+  background-color: #fffafa;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: 0.7s;
+  z-index: 99;
+  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  --webkit-backface-visibility: hidden;
+}
+.mxa-footer-ornament-shape{
+  border-bottom: 100px solid #DBDBDB;
+  border-right: 100vw solid transparent;
+  @media (max-width: theme('screens.sm')){
+    border-bottom: 65px solid #DBDBDB;
+  }
+}
+#mxa-main-landing{
+  &::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    right: 0;
+    top: -52px;
+    border-bottom: 860px solid #DBDBDB;
+    border-left: 100vw solid transparent;
+    z-index: -1;
+    @media (max-width: theme('screens.lg')){
+      top: 0px;
+      border-bottom: 840px solid #DBDBDB;
+    }
+    @media (max-width: theme('screens.md')){
+      top: 100px;
+      border-bottom: 745px solid #DBDBDB;
+    }
+    @media (max-width: theme('screens.sm')){
+      top: 10%;
+      border-bottom: 512px solid #DBDBDB;
+    }
+  }
+}
+.mxa-service-ornament-before{
+  border-top: 50px solid transparent;
+  border-bottom: 55px solid #ff0000;
+  border-left: 50vw solid #ff0000;
+  border-right: 50vw solid transparent;
+  @media (max-width: theme('screens.sm')){
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid #ff0000;
+  }
+}
+.mxa-service-ornament-after{
+  border-top: 80px solid #ff0000;
+  border-bottom: 85px solid transparent;
+  border-left: 50vw solid #ff0000;
+  border-right: 50vw solid transparent;
+  @media (max-width: theme('screens.sm')){
+    border-top: 35px solid #ff0000;
+    border-bottom: 35px solid transparent;
+  }
+  @media (max-width: theme('screens.sm')){
+    border-left: 50vw solid #ff0000;
+    border-right: 50vw solid transparent;
+  }
+}
+.mxa-case-studies-ornament-before{
+  border-top: 140px solid #DBDBDB;
+  border-left: 100vw solid transparent;
+  @media (max-width: theme('screens.md')){
+    border-top: 100px solid #DBDBDB;
+  }
+  @media (max-width: theme('screens.sm')){
+    border-top: 65px solid #DBDBDB;
+  }
+}
+#mxa-case-studies{
+  a{
+    .mxa-icon-chevron-right{
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(0px);
+    }
+  }
+  a:hover{
+    .mxa-icon-chevron-right{
+      transform: translateX(10px);  
+    }
+  }
+}
+.mxa-about-page{
+  .mxa-about-clientlist-ornament{
+    border-top: 140px solid #F1F1F1;
+    border-left: 100vw solid transparent;
+    @media (max-width: theme('screens.md')){
+      border-top: 100px solid #F1F1F1;
+    }
+    @media (max-width: theme('screens.sm')){
+      border-top: 65px solid #F1F1F1;
+    }
+  }
+}
+.mxa-ornament-about-img{
+  &::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 750px solid #AFB1B3;
+    border-left: 14vw solid transparent;
+    border-right: 38vw solid #AFB1B3;
+    z-index: -1;
+    @media (max-width: theme('screens.lg')){
+      border-bottom: 100vh solid #AFB1B3;
+      border-left: 30vw solid transparent;
+      border-right: 38vw solid #AFB1B3;
+    }
+    @media (max-width: theme('screens.md')){
+      border-top: 160px solid transparent;
+      border-bottom: 100vh solid #AFB1B3;
+      border-left: none;
+      border-right: 100vw solid #AFB1B3;
+    }
+    @media (max-width: theme('screens.sm')){
+      border-top: 100px solid transparent;
+      border-bottom: 100vh solid #AFB1B3;
+      border-left: none;
+      border-right: 100vw solid #AFB1B3;
+    }
+  }
+}
+
+.swiper-navigation{
+  .swiper-button-prev::after{
+    content: '';
+  }
+  .swiper-button-next::after{
+    content: '';
+  }
+  .swiper-button-prev{
+    left: 0;
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+    right: 0;
+    background-image: url('../img/icon/icon-arrow-left.png');
+    background-repeat: no-repeat;
+    background-size: 24px;
+  }
+  .swiper-button-next{
+    left: 45px;
+    right: 0;
+    background-image: url('../img/icon/icon-arrow-right.png');
+    background-repeat: no-repeat;
+    background-size: 24px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next{
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.mxa-hr{
+  border-top-width: 1px;
+  border-color: rgba(178, 178, 178, 0.5);
+}
+.mxa-icon-chevron-right{
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  top: 3px;
+  background-image: url('../img/icon/icon-arrow-right.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
